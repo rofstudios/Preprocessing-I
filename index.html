@@ -1,19 +1,135 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-
-  <title>My Resume</title>
-
-  <link rel="stylesheet" href="css/index.css">
-
-  <!--[if lt IE 9]>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://kit.fontawesome.com/e89388bd92.js" crossorigin="anonymous"></script>
+    <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
 
 <body>
-  <h1>My Resume</h1>
-</body>
-</html>
+    <div id="wrapper">
+        <div id="main">
+            <div id="navBar">
+                <div id="barTop">
+                    <div id="profileImage">
+                        <img src="/images/profile.jpg" alt="">
+                    </div>
+                    <div class="profile">
+                        <h1 id="name">Legacy Rem</h1>
+                    </div>
+                    <nav id="nav">
+                        <a href="#home" title="Home Page">Home</a>
+                        <a href="#about" title="Home Page">About</a>
+                        <a href="#projects" title="Work History Page">Work History</a>
+                        <a href="#portfolio" title="Portfolio Page"> Portfolio</a>
+                    </nav>
+                </div>
+                <div id="barBot">
+                    <a href="#" class="icons fab fa-linkedin fa-4x"></a>
+                    <a href="#" class="icons fab fa-github fa-4x"></a>
+                    <a href="#" class="icons fab fa-codepen fa-4x"></a>
+                </div>
+            </div>
+            <div id="content">
+                <section id="home">
+                    <header id="intro">
+                        <div id="hello">
+                            <h2>Hi!</h2>
+                            <p id="p1">I am an aspiring web developer at Lambda Schools</p>
+                            <p>Looking to bring new projects to life with creativity and accessibility in mind.</p>
+                            <p id="quote">“The most important property of a program is whether it accomplishes the intention of its user.”
+                                ― C.A.R. Hoare</p>
+                            <a href="#about"><button>About Me</button></a>
+                        </div>
+                        <div id="hero">
+                            <img src="/images/hero.jpg" alt="">
+                        </div>
+                    </header>
+                </section>
+                <section id="about">
+                    <div class="aboutImage">
+                        <img src="/images/about-me.jpg" alt="">
+                    </div>
+                    <div class="aboutMe">
+                        <h3>About Me</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos hic placeat culpa saepe debitis enim eligendi corrupti adipisci neque quo, earum obcaecati architecto omnis deleniti, praesentium excepturi magni officia cupiditate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam iste id deleniti eum harum obcaecati accusamus voluptates ex vero facilis. Qui at corporis suscipit nihil laborum id, inventore sed dolores. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis cupiditate distinctio, earum, a asperiores et, iusto natus provident officiis modi voluptatibus iure totam tempore dicta illum ex ab fugiat. Beatae.</p>
+                    </div>
+                    <div class="skills">
+                        <h3>Knowledge In:</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic eius obcaecati accusantium id quaerat atque, assumenda voluptas ipsa eaque vero quod pariatur, quis nam architecto necessitatibus iure dignissimos magni reiciendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, at quibusdam ipsa enim facere ut aperiam eveniet. Sunt, ut eius optio eum iste! Recusandae eius officiis natus, temporibus sit error! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas obcaecati suscipit, dolorum deleniti dolores reprehenderit ex culpa delectus blanditiis accusamus voluptatum architecto, recusandae, ea eius nemo atque ipsam. Unde, consequuntur.</p>
+                    </div>
+                </section>
+                <section id="projects">
+                    <div class="workHistory">
+                        <h3>Work History</h3>
+                    </div>
+                    <table id="work">
+                        <tr>
+                            <th>Yrs</th>
+                            <th>Company</th>
+                            <th>Title</th>
+                            <th>Tech Used</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Apple</td>
+                            <td>Software Engineer</td>
+                            <td>Swift</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Microsoft</td>
+                            <td>Computer Scientist</td>
+                            <td>.NET</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Amazon</td>
+                            <td>Dev Ops</td>
+                            <td>AWS</td>
+                        </tr>
+                    </table>
+                </section>
+                <section id="portfolio">
+                    <div id="row">
+                        <article class="item">
+                            <a href="https://codepen.io/rofstudios/pen/WNbNyKL" class="image fit"><img src="images/bakery2-self.png" alt="Sweet Eat Bakery Page" /></a>
+                            <a href="#">
+                                <h3>Sweet Eats Bakery</h3>
+                            </a>
+                        </article>
+                        <article class="item">
+                            <a href="https://github.com/rofstudios/responsive-web-design-I" class="image fit"><img src="images/desktop-self.png" alt="Great Idea Practice Page" /></a>
+                            <a href="#">
+                                <h3>Great Idea! Practice</h3>
+                            </a>
+                        </article>
+                    </div>
+                    <div id="row">
+                        <article class="item">
+                            <a href="#" class="image fit"><img src="images/odell-self.png" alt="Artist page for Tom Odell" /></a>
+                            <a href="#">
+                                <h3>Artist Page</h3>
+                            </a>
+                        </article>
+                        <article class="item">
+                            <a href="https://codepen.io/rofstudios/pen/XWJWBBa" class="image fit"><img src="images/bakery-animation-self.png" alt="Sweet Eats Bakery Animation Test" /></a>
+                            <header>
+                                <a href="#">
+                                    <h3>Bakery Animation Test</h3>
+                                </a>
+                            </header>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</body></html>

@@ -4,48 +4,135 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    //    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
@@ -53,7 +140,378 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+    font-size: 62.5%;
 }
 
+/*=========== GOOGLE FONTS ===========*/
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Caveat|Inconsolata|Lilita+One|Luckiest+Guy|Noto+Sans|Patrick+Hand|Permanent+Marker&display=swap');
+//===================
+
+/*=========== VARIABLES ==============*/
+@normal-font: 1.6rem;
+//===================
+
+/*=============== MIXINS =============*/
+.navpart-size {
+    display: flex;
+    flex-direction: column;
+    //    align-content: space-around;
+    //    width: 10%;
+    height: 30%;
+}
+
+.mobile-display {
+    display: flex;
+    flex-direction: column;
+}
+
+.p-style {
+    font-size: @normal-font;
+    color: black;
+}
+
+.links {
+    text-decoration: none;
+}
+
+//===============
+
+
+/*================ LAYOUT CONTROL ============*/
+
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    //    width: 1050px;
+    width: 100%;
+
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+
+    //    margin: 0;
+    #navBar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 200px;
+        height: 205vh;
+        //        position: fixed;
+        font-size: @normal-font;
+        background-image: url(../images/nav-image.jpg);
+
+        #barTop {
+            .navpart-size();
+            display: flex;
+            flex-direction: column;
+
+            #profileImage {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 10% 0;
+                background-color: transparent;
+                opacity: 1;
+
+                img {
+                    display: flex;
+                    width: 60%;
+
+                }
+            }
+
+            .profile {
+                color: aliceblue;
+                text-align: center;
+                //                line-height: 50px;
+            }
+
+            #nav {
+                display: flex;
+                flex-direction: column;
+                text-align: end;
+                padding: 5% 0;
+
+                //                background-color: rgba(255,255,255,0.5);
+                //                opacity: .15;
+                a {
+                    margin: 5% 0;
+                    padding: 10% 10%;
+                    background-color: aliceblue;
+                    color: white;
+                    text-decoration: none;
+                    background-color: rgba(255, 255, 255, 0.5)
+                }
+
+                a:hover {
+                    color: black;
+                    opacity: .5;
+                }
+            }
+        }
+
+        #barBot {
+            .navpart-size();
+            align-items: center;
+            justify-content: space-around;
+
+            .icons {
+                text-decoration: none;
+                color: black;
+                background-color: transparent;
+                opacity: .5;
+            }
+
+            .icons:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    #content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        //        height: 100vh;
+        font-size: @normal-font;
+        //        margin: 0;
+    }
+}
+
+/*============== FONTS STYLING =============*/
+h1 {
+    font-size: 2rem;
+    font-family: "Patrick Hand", cursive;
+}
+
+/////////////////////
+/*=============== SECTIONS ===========*/
+#home {
+    #intro {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        background-color: antiquewhite;
+
+        @media (max-width: 500px) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+
+            @media (max-width: 500px) {
+                display: none;
+            }
+
+        }
+
+        #hello {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            //            height: 20vh;
+            justify-content: space-between;
+            text-align: center;
+            align-self: center;
+            background-color: antiquewhite;
+
+            h2 {
+                font-family: 'Noto Sans', sans-serif;
+                font-size: 6rem;
+
+                //                margin-bottom: 20%;
+                //                padding-bottom: 50%;
+                @media (max-width: 500px) {
+                    font-size: 4rem;
+                }
+            }
+
+            p {
+                padding: 5% 0;
+                font-family: 'Inconsolata', monospace;
+                font-size: 2.7rem;
+
+                @media (max-width: 500px) {
+                    font-size: 2rem;
+                }
+
+            }
+
+            #p1 {
+                padding-top: 10%;
+                padding-bottom: 10%;
+                font-family: 'Inconsolata', monospace;
+            }
+
+            #quote {
+                font-size: 2.6rem;
+                font-family: 'Caveat', cursive;
+
+            }
+
+            button {
+                background-color: aliceblue;
+                width: 30%;
+                padding: 1%;
+                border-radius: 25px;
+                align-self: center;
+                font-size: 2rem;
+                //                font-family: 'Noto Sans', sans-serif;
+                font-family: "Patrick Hand", cursive;
+
+                opacity: .5;
+
+                @media (max-width: 500px) {
+                    width: 25%;
+                    padding: .5%;
+                    border-radius: 15px;
+                    font-size: 1.6rem;
+                }
+            }
+
+            button:hover {
+                transform: scale(1.2);
+                color: white;
+                background-color: black;
+                opacity: 1;
+            }
+        }
+    }
+
+}
+
+#about {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @media (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+    }
+
+    .aboutImage img {
+        width: 100%;
+    }
+
+    .aboutMe {
+        display: flex;
+        flex-direction: column;
+        padding: 5% 2%;
+        width: 50%;
+        line-height: 3rem;
+
+        @media (max-width: 500px) {
+            width: 100%;
+            line-height: 1.8rem;
+        }
+
+        h3 {
+            font-size: 3rem;
+            font-family: 'Noto Sans', sans-serif;
+            padding-bottom: 5%;
+        }
+
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 5% 2%;
+        line-height: 3rem;
+
+        @media (max-width: 500px) {
+            width: 100%;
+            line-height: 1.8rem;
+
+        }
+
+
+        h3 {
+            font-size: 3rem;
+            font-family: 'Noto Sans', sans-serif;
+            padding-bottom: 5%;
+        }
+    }
+
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+
+    .workHistory {
+        text-align: center;
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 3rem;
+        padding-bottom: 5%;
+    }
+
+
+    #work {
+        font-size: 2rem;
+        font-family: 'Noto Sans', sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+
+        @media (max-width: 500px) {
+            font-size: 1.6rem;
+        }
+
+        td,
+        tr {
+            border: 1px solid black;
+            padding: 1%;
+        }
+
+        tr:nth-child(even) {
+            background-color: aliceblue;
+        }
+
+        tr:hover {
+            background-color: beige;
+        }
+
+        th {
+            padding-top: 1%;
+            padding-bottom: 1%;
+            text-align: left;
+            background-color: darkblue;
+            color: white;
+        }
+    }
+
+
+    #portfolio {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        #row {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            width: 100%;
+
+            .item img {
+                width: 100%;
+                padding: 10%;
+            }
+
+            .item a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
